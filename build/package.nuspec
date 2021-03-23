@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>AspNetCore.Auditing.DynamoDB</id>
+        <version>1.0.0</version>
+        <description>AspNetCore.Auditing.DynamoDB</description>
+        <authors>Singtone Contributors</authors>
+		<language>en-US</language>
+		<dependencies>
+			<group targetFramework="netcoreapp3.1">
+				<dependency id="AspNetCore.Logging.Common" version="0.0.1" exclude="all" />
+				<dependency id="AWSSDK.DynamoDBv2" version="3.5.4.33" exclude="all" />
+				<dependency id="Microsoft.Extensions.Logging" version="5.0.0" exclude="all" />
+			</group>
+		</dependencies>
+    </metadata>
+	<files>
+		<file src="AspNetCore.Auditing.DynamoDB*.dll" target="lib\netcoreapp3.1" />
+	</files>
+</package>

@@ -1,0 +1,13 @@
+mode: ContinuousDeployment
+next-version: 0.0.1
+assembly-versioning-scheme: MajorMinorPatch
+assembly-file-versioning-scheme: MajorMinorPatchTag
+assembly-informational-format: '{SemVer}'
+increment: Inherit
+continuous-delivery-fallback-tag: ''
+tag-prefix: '[vV]'
+build-metadata-padding: 4
+commits-since-version-source-padding: 4
+branches: {}
+ignore:
+  sha: []
