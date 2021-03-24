@@ -11,7 +11,7 @@ using AspNetCore.Logging.Common;
 
 namespace AspNetCore.Auditing.DynamoDB
 {
-    public class AuditingDynamoDBLogger : AuditingLogger, IAuditingLogger
+    public class AuditingDynamoDBLogger : AuditingLogger
     {
         private const int DEFAULT_AUDITLOGTTLDAYS = 90;
         private const string DEFAULT_TABLENAME = "apiAuditLog";
@@ -56,9 +56,9 @@ namespace AspNetCore.Auditing.DynamoDB
             }
         }
 
-        private long getRecordExpirationTime(int? configTTLDays)
+        private long getRecordExpirationTime(int configTTLDays)
         {
-            int ttlDays = configTTLDays.HasValue && configTTLDays.Value > 0 ? configTTLDays.Value : DEFAULT_AUDITLOGTTLDAYS;
+            int ttlDays = configTTLDays > 0 ? configTTLDays : DEFAULT_AUDITLOGTTLDAYS;
             return DateTimeOffset.UtcNow.ToUnixTimeSeconds() + 86400 * ttlDays;
         }
     }
