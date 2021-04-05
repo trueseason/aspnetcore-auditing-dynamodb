@@ -3,9 +3,11 @@
     <metadata>
         <id>AspNetCore.Auditing.DynamoDB</id>
         <version>1.0.0</version>
-        <description>AspNetCore.Auditing.DynamoDB</description>
         <authors>Singtone Contributors</authors>
 		<language>en-US</language>
+		<license type="expression">MIT</license>
+		<repository type="git" url="https://github.com/trueseason/aspnetcore-auditing-dynamodb.git" />
+		<description>An ASP.NET Core auditing provider logging auditing information to DynamoDB.</description>
 		<dependencies>
 			<group targetFramework="netcoreapp3.1">
 				<dependency id="AspNetCore.Logging.Common" version="0.0.1" />
