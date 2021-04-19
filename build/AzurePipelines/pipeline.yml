@@ -1,26 +1,10 @@
 name: $(BuildDefinitionName)_$(SourceBranchName)_$(date:yyyyMMdd)$(rev:.r)
 
-trigger:
-- master
-- develop
-- release/*
-- feature/*
-- hotfix/*
-
-variables:
-  - group: SharedVar
-  - name: solution
-    value: '**/*.sln'
-  - name: buildPlatform
-    value: 'Any CPU'
-  - name: buildConfiguration
-    value: 'Release'
-
 resources:
   repositories:
     - repository: BuildPipelines
       type: git
       name: "Utilities/PipelineTemplates"
 
-stages:
-- template: Azure/NetCoreNuGetLibrary.yml@BuildPipelines
+extends:
+  template: Azure/NetCoreNuGetLibrary.yml@BuildPipelines
